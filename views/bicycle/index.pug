@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+  a(href='/bicycles/create') new bicicle
+  table.table
+    thead
+      tr
+        th(scope='col') #
+        th(scope='col') color
+        th(scope='col') model
+        th(scope='col') location
+    tbody
+      each bicy in bicys
+        tr
+          td(scope='row')
+            = bicy.id
+          td= bicy.color
+          td= bicy.model
+          td= bicy.location
+          td
+            a(href=`/bicycles/${bicy.id}/update`) update
+          td
+            form(action=`/bicycles/${bicy.id}/delete` method='post')
+              input(type="hidden" name='id' value= bicy.id)
+              button.link-button(type='submit' name='submit_param' value='submit_value')
+                = 'Delete'

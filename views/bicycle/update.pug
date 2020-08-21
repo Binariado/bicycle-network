@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+  a(href='/bicycles') back
+
+  br
+  br
+  br
+
+  h1 new bicycle
+
+  br
+  br
+
+  form(action=`/bicycles/${bicy.id}/update` method='post')
+    lable(for='id') ID:
+    input#id(type='text' name='id' value= bicy.id)
+    br
+    lable(for='color') Color:
+    input#color(type='text' name='color' value= bicy.color)
+    br
+    lable(for='model') Model:
+    input#model(type='text' name='model' value= bicy.model)
+    br
+    lable(for='lat') Latitude:
+    input#lat(type='text' name='lat' value= bicy.location[0])
+    br
+    lable(for='lng') Longitude:
+    input#lng(type='text' name='lng' value= bicy.location[1])
+    br
+    input.btn(type='submit' value='Ok')

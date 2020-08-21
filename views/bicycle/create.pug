@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+  a(href='/bicycles') back
+
+  br
+  br
+  br
+
+  h1 new bicycle
+
+  br
+  br
+
+  form(action='/bicycles/create' method='post')
+    lable(for='id') ID:
+    input#id(type='text' name='id')
+    br
+    lable(for='color') Color:
+    input#color(type='text' name='color')
+    br
+    lable(for='model') Model:
+    input#model(type='text' name='model')
+    br
+    lable(for='lat') Latitude:
+    input#lat(type='text' name='lat')
+    br
+    lable(for='lng') Longitude:
+    input#lng(type='text' name='lng')
+    br
+    input.btn(type='submit' value='Ok')
