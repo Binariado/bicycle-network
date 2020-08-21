@@ -4,7 +4,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
 }).addTo(map);
 
-let marker = L.marker([11.0046365, -74.8276493,13.33]).addTo(map);
+// let marker = L.marker([11.0046365, -74.8276493,13.33]).addTo(map);
 
 // function onMapClick(e) {
 //   console.log(e);
@@ -22,6 +22,15 @@ function onMapClick(e) {
 }
 
 map.on('click', onMapClick);
+
+$.get('api/bicycles',function (result, success){
+    console.log(result);
+    result.bicicle.forEach(elem => {
+        L.marker(elem.location,{title:elem.id}).addTo(map);
+    });
+}).fail(function(error) {
+    console.log( "error" );
+});
 
 //marker.bindPopup("<b>Hello world!</b><br>").openPopup();
 

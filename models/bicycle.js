@@ -15,7 +15,7 @@ Bicycle.add = function(aBicy){
 }
 
 Bicycle.findById = function(aBicyId){
-  const bicy = Bicycle.allBicycle.find(x => x.id = aBicyId);
+  const bicy = Bicycle.allBicycle.find(x => x.id == aBicyId);
   if(bicy)
     return bicy;
   else 
