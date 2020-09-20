@@ -33,10 +33,10 @@ Bicycle.removeById = function(aBicyId){
   }
 }
 
-const a = new Bicycle(1, 'red', 'veloz', [10.982342, -74.836292]);
-const b = new Bicycle(2, 'blue', 'veloz', [10.983184, -74.775524]);
+// const a = new Bicycle(1, 'red', 'veloz', [10.982342, -74.836292]);
+// const b = new Bicycle(2, 'blue', 'veloz', [10.983184, -74.775524]);
 
-Bicycle.add(a);
-Bicycle.add(b);
+// Bicycle.add(a);
+// Bicycle.add(b);
 
 module.exports = Bicycle;
