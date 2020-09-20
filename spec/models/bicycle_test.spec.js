@@ -1,6 +1,6 @@
 const Bicycle = require('../../models/bicycle');
 
-beforeEach(() =>{ Bicycle.allBicycle = []; })
+beforeEach(() => { Bicycle.allBicycle = []; });
 
 describe('Bicycle.allBicycle', () => {
   it('Starts empty', () => {
@@ -13,7 +13,7 @@ describe('Bicycle.add', () => {
     expect(Bicycle.allBicycle.length).toBe(0);
 
     const a = new Bicycle(1, 'red', 'veloz', [10.982342, -74.836292]);
-    
+
     Bicycle.add(a);
 
     expect(Bicycle.allBicycle.length).toBe(1);
@@ -23,12 +23,12 @@ describe('Bicycle.add', () => {
 
 describe('Bicycle.findById', () => {
   it('return bicycle with id 1', () => {
-    
+
     expect(Bicycle.allBicycle.length).toBe(0);
 
     const bicy1 = new Bicycle(1, 'green', 'veloz', [10.982342, -74.836292]);
     const bicy2 = new Bicycle(2, 'blue', 'veloz', [10.983184, -74.775524]);
-    
+
     Bicycle.add(bicy1);
     Bicycle.add(bicy2);
 
@@ -43,10 +43,10 @@ describe('Bicycle.findById', () => {
 describe('Bicycle.removeById', () => {
   it('remove bicycle with id 1', () => {
     expect(Bicycle.allBicycle.length).toBe(0);
-    
+
     const bicy1 = new Bicycle(1, 'green', 'veloz', [10.982342, -74.836292]);
     const bicy2 = new Bicycle(2, 'blue', 'veloz', [10.983184, -74.775524]);
-    
+
     Bicycle.add(bicy1);
     Bicycle.add(bicy2);
 
